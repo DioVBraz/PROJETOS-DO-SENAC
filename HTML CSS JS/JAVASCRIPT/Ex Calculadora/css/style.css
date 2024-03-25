@@ -1,0 +1,150 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    height: 100%;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: #415063;
+    font-family: 'Poppins', sans-serif;
+    color: white;
+    width: 100%;
+    height: 80%;
+}
+
+#container {
+    width: 240px;
+    height: 340px;
+    background-color: transparent;
+    margin-top: 10px;
+}
+
+#display {
+    width: 100%;
+    height: 25%;
+    background-color: #2E3A46;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#content {
+    width: 100%;
+    height: 80%;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#displayResult {
+    width: 90%;
+    height:60%;
+    background-color: #2E3A46;
+    border: 0px;
+    color: #e9e8e9;
+    font-size: 22px;
+    padding-right: 10px;
+    text-align: end;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    border: 1px solid #cccbcc;
+    border-radius: 5px;
+}
+
+#top {
+    width: 100%;
+    height: 16%;
+    gap: 0px;
+    display: flex;
+    justify-content: space-between;
+}
+
+button {
+    height: 60px;
+}
+
+#clear {
+    width: 75%;
+    height: 60px;
+    border: 1px solid #8f8e8e;
+}
+
+#clear:hover {
+    background-color: #cccbcb;
+}
+
+#first {
+    width: 100%;
+    height: 16%;
+    gap: 0px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.number {
+    gap: 0px;
+    width: 25%; 
+    border: 1px solid #8f8e8e;
+}
+
+.number:hover {
+    background-color: #cccbcb;
+}
+
+.operator {
+    width: 25%;
+    height: 60px;
+    background-color: #FB8231;
+    border: 1px solid #8f8e8e;
+    color: white;
+    font-size: 18px;
+}
+
+.operator:hover {
+    background-color: #dd722b;
+}
+
+#second {
+    width: 100%;
+    height: 16%;
+    gap: 0px;
+    display: flex;
+    justify-content: space-between;
+}
+
+#third {
+    width: 100%;
+    height: 16%;
+    gap: 0px;
+    display: flex;
+    justify-content: space-between;
+}
+
+#fourth {
+    width: 100%;
+    height: 16%;
+    gap: 0px;
+    display: flex;
+    justify-content: space-between;
+}
+
+#zero {
+    width: 50%;
+    border-bottom-left-radius: 10px;
+}
+
+#equal {
+    border-bottom-right-radius: 10px;
+}
