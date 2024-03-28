@@ -1,0 +1,171 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+}
+
+body{
+    font-family: "Poppins" , sans-serif;
+}
+
+.background{
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),url(Imagens/Img.jpg);
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: 100%;
+   
+}
+
+.container{
+    padding: 0 15%;
+    margin: 0 auto;
+}
+
+nav{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1.5vw 10vw;
+  width: 100%;
+}
+
+.logo i{
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: gold;
+    padding-right: 12vh;
+}
+
+.ul{
+    display: flex;
+    align-items: center;
+}
+
+.ul li{
+    margin: 0 35px;
+    font-size: 1rem;
+}
+
+.ul li a{
+    color: white;
+}
+
+.ul a:hover{
+    color:  gold;
+    transition:  0.3s all;
+}
+
+button{
+    color: gold;
+    background: transparent;
+    border: solid 1px gold;
+    padding: 0.7rem;
+    border-radius: 1rem;
+    font-size: 1rem;
+    cursor: pointer;
+    width: 15vw;
+}
+
+button:hover{
+    background-color: gold;
+    color: black;
+    transition: 0.5s;
+}
+
+.menu-icon{
+    display: none;
+    position: relative;
+    z-index: 10;
+}
+
+/*projetos*/
+
+  .projetos h2 {
+    font-size: 2.5rem;
+  }
+  
+  .projetos .cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .projetos .cards .card-item {
+    border: 2px solid gold;
+    border-radius: 5px;
+    box-shadow: 7px 7px 13px 0px rgba(50, 50, 50, 0.22);
+    padding: 20px; 
+    margin: 20px;
+    width: 350px;
+    height: 350px;
+    transition: all 0.3s ease-out;  
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .cards h2 {
+    color: gold;
+    text-align: center;
+    margin-bottom: 50px;
+  }
+  
+  .cards p {
+    color: white;
+    font-size: 1rem;
+    text-align: center;
+  }
+  
+  .cards button {
+    margin-top: 20%;
+  }
+  
+  @media (max-width: 960px) {
+
+    .background{
+      width: 100%;
+      height: 100%;
+    }
+    .menu-icon{
+      display: block;
+  }
+
+  .ul{
+      position: fixed;
+      background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),url(Imagens/Img.jpg);
+      top: 0;
+      width: 100%;
+      height: 100%;
+      left: 100%;
+      transition: 0.3s;
+      flex-direction: column;
+      justify-content: center;
+  }
+
+  .ul li{
+      font-size: 20px;
+      margin: 20px 0;
+  }
+
+  .ul.ativo{
+      left: 0;
+  }
+
+  .container{
+    padding-top: 5vw;
+}
+
+  button{
+    margin-top: 3%;
+    width: 30vw;
+}
+
+  }
+

@@ -1,0 +1,230 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    list-style: none;
+    text-decoration: none;
+}
+
+body{
+    background: gold;
+}
+
+.brasil-nav{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 5px 10vw;
+    width: 100%;
+    transition: all 0.5s;
+    position: fixed;
+    background-color: green;
+    box-shadow: 1px 1px 10px green;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo img {
+    width: 55%;
+    margin-top: 1vh;
+    border: solid 1px gold;
+}
+
+.brasil-nav ul{
+    display: flex;
+    gap: 5rem;
+}
+
+.brasil-nav ul li a{
+    color: gold;
+    font-weight: 500;
+    transition: all 0.5s;
+}
+
+.brasil-nav ul li a:hover{
+    color: white;
+}
+
+.brasil-nav i{
+    cursor: pointer;
+    font-size: 1.5rem;
+}
+
+.menu-br{
+    cursor: pointer;
+    display: none;
+}
+
+.menu-br .bar{
+    display: block;
+    width: 28px;
+    height: 3px;
+    border-radius: 3px;
+    background: gold;
+    margin: 5px auto;
+    transition: all 0.3s;
+}
+
+.menu-br .bar:nth-child(1),
+.menu-br .bar:nth-child(3){
+    background: gold;
+}
+
+/* brasil*/
+
+.card-copa {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(40px, 1fr));
+    margin-top: 25vh;
+}
+
+.cards {
+    position: relative;
+    width: 82%;
+    border: 3px solid green;
+    box-shadow: 7px 7px 15px black;
+    transition: all 0.3s;
+    margin-left: 1.5vw;
+}
+
+.cards:hover{
+	transform: scale(1.1);
+}
+
+.cards img {
+    width: 100%;
+    height: 100%;
+    transition: transform 0.5s;
+}
+
+.card-item {
+    height: 0;
+    width: 100%;
+    background: linear-gradient(transparent, green 58%);
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 0 40px;
+    text-align: center;
+    font-size: 14px;
+    transition: height 0.5s;
+}
+
+.card-item h3 {
+    font-weight: 800;
+    margin-bottom: 5px;
+    margin-top: 80%;
+    font-family: bebas neue;
+    font-size: 30px;
+    letter-spacing: 2px;
+    color: gold;
+}
+
+.card-item p {
+    color: gold;
+}
+
+.card-item a {
+    margin-top: 10px;
+    color: green;
+    text-decoration: none;
+    font-size: 14px;
+    background: gold;
+    border-radius: 50px;
+    text-align: center;
+    padding: 5px 15px;
+}
+
+.cardsLhover img {
+    transform: scale(1.2);
+}
+
+.cards:hover .card-item {
+    height: 100%;
+}
+
+@media (max-width: 960px) {
+
+    .brasil-nav ul li a{
+        color: green; 
+    }
+
+    .brasil-nav ul li {
+        margin-left: 5vw; 
+        height: 13.5vh;
+    }
+
+    .brasil-nav ul {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+        justify-content: center;
+    }
+
+    .menu-br{
+        display: block;
+    }
+
+    .menu-br.ativo .bar:nth-child(1){
+        transform:  translateY(8px) rotate(45deg);
+    }
+
+    .menu-br.ativo .bar:nth-child(2) {
+        opacity: 0;
+    }
+
+    .menu-br.ativo .bar:nth-child(3){
+        transform: translateY(-8px) rotate(-45deg);
+    }
+
+    .cabeçalho-br{
+        position: fixed;
+        right: -100%;
+        top: 85px;
+        width: 100%;
+        height: 100%;
+        flex-direction: column;
+        background: gold;
+        transition: 0.3s;
+    }
+
+    .cabeçalho-br.ativo{
+        right: 0;
+    }
+
+    .card-copa {
+        grid-template-columns: 1fr; 
+        margin-top: 20vh; 
+    }
+
+    .cards {
+        width: 80%; 
+        max-width: 300px;
+        height: 300px; 
+        margin: 0 auto 8vh; 
+    }
+
+    .cards img {
+        width: 100%; 
+        height: 100%;
+        object-fit: cover; 
+        object-position: center top; 
+    }
+}
+
+
+
+
+
+
+
+

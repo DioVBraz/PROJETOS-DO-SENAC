@@ -1,0 +1,285 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600display=swap");
+
+*{
+    margin: 0;
+    padding: 0;
+    border: none;
+    outline: none;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body{
+    display: flex;
+}
+
+.container{
+    position: sticky;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 110px;
+    height: 100vh;
+    padding: 0 1.7rem;
+    color: white;
+    overflow: hidden;
+    transition: all 0.5s linear;
+    background: #4169E1;
+}
+
+.container:hover{
+    width: 240px;
+    transition: 0.5s;
+}
+
+.logo{
+    height: 80px;
+    padding: 16px;
+}
+
+.menu{
+    height: 88%;
+    position: relative;
+    list-style: none;
+    padding: 0;
+}
+
+.menu li{
+    padding: 1rem;
+    margin: 8px 0;
+    border-radius: 8px;
+    transition: all 0.5s ease-in-out;
+}
+
+.menu li:hover,
+.menu-itens{
+    background: #ADD8E6;
+}
+
+.menu a{
+    color: white;
+    font-size: 14px;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.menu a span{
+    overflow: hidden;
+}
+
+.menu a i{
+    font-size: 1.2rem;
+}
+
+.sair{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+}
+
+.dashboard-container{
+    position: relative;
+    background: #ADD8E6;
+    width: 100%;
+    padding: 1rem;
+}
+
+.cabeçalho-pesquisa{
+    display: flex;
+    justify-content: space-between;  
+    align-items: center;
+    flex-wrap: wrap;
+    background: white;
+    border-radius: 10px;
+    padding: 10px 2rem;
+    margin-bottom: 1rem;
+    box-shadow: 1px 1px 5px black;
+  }
+
+.titulo-pesquisa{
+    color: #4169E1;
+}
+
+.pesquisa{
+    display: flex;
+    align-items: center;
+    gap: 1;
+}
+
+.pesquisa-icon{
+    background: #ADD8E6;
+    border-radius: 15px;
+    color: #4169E1;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    padding: 10px;
+    box-shadow: 0.5px 0.5px 3px black;
+}
+
+.pesquisa-icon input{
+    background: transparent;
+    padding: 10px;
+    color: #4169E1;
+}
+
+.pesquisa-icon input::placeholder{
+    color: #4169E1
+}
+
+.pesquisa-icon i{
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: all 0.5s ease-in-out;
+}
+
+.pesquisa-icon i:hover{
+    transform: scale(1.2);
+}
+
+.cards-container{
+    background: white;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 1px 1px 5px black;
+}
+
+.cards{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.cards-titulo{
+    color: #4169E1;
+    padding-bottom: 10px;
+    font-size: 15px;
+}
+
+.cards-pagamento{
+    background: #ADD8E6;
+    border-radius: 10px;
+    padding: 1.2rem;
+    width: 290px;
+    height: 150px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: all 0.5s ease-in-out;
+    box-shadow: 1px 1px 5px black;
+}
+
+.cards-pagamento:hover{
+    transform: translateY(-5px);
+}
+
+.cards-cabeçalho{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.info-cards{
+    display: flex;
+    flex-direction: column;
+}
+
+.titulo-info{
+    font-size: 12px;
+    font-weight: 200;
+}
+
+.valor-cards{
+    font-size: 24px;
+    font-family: "Courier New", 'Courier New', Courier, monospace;
+    font-weight: 600;
+}
+
+.numero-cards{
+    font-size: 18px;
+    color: #363636;
+    letter-spacing: 2px;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.cards-pagamento i{
+    color: white;
+    padding: 1rem;
+    height: 60px;
+    width: 60px;
+    text-align: center;
+    border-radius: 50%;
+    font-size: 1.5rem; 
+    background: #4169E1;
+}
+
+.finanças-container{
+    background: white;
+    margin-top: 1rem;
+    border-radius: 10px;
+    padding: 2rem;
+    box-shadow: 1px 1px 5px black;
+}
+
+.finanças-titulo{
+    color: #4169E1;
+    padding-bottom: 10px;
+    font-size: 15px;
+}
+
+.finanças{
+    width: 100%;
+    box-shadow: 1px 1px 5px black;
+}
+
+table{
+    width: 100%;
+    border-collapse: collapse;
+}
+
+thead{
+    background: #4169E1;
+    color: white;
+}
+
+th{
+    padding: 15px;
+    text-align: left;
+}
+
+tbody{
+    background: #ADD8E6;
+}
+
+td{
+    padding: 15px;
+    font-size: 14px;
+    color: black;
+}
+
+tr:nth-child(even){
+    background: white;
+}
+
+tfoot{
+    background: #4169E1;
+    font-weight:bold;
+    color: white;
+}
+
+tfoot td{
+    padding: 15px;
+    color: white;
+}
+
+.finanças button{
+    color: green;
+    background: none;
+    cursor: pointer;
+}
+
+

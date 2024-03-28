@@ -1,0 +1,183 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    list-style: none;
+    text-decoration: none;
+}
+
+body{
+    background: gold;
+}
+
+.brasil-nav{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 5px 10vw;
+    width: 100%;
+    transition: all 0.5s;
+    position: fixed;
+    background-color: green;
+    box-shadow: 1px 1px 10px green;
+}
+
+.logo img {
+    width: 55%;
+    margin-top: 1vh;
+    border: solid 1px gold;
+}
+
+.brasil-nav ul{
+    display: flex;
+    gap: 5rem;
+}
+
+.brasil-nav ul li a{
+    color: gold;
+    font-weight: 500;
+    transition: all 0.5s;
+}
+
+.brasil-nav ul li a:hover{
+    color: white;
+}
+
+.brasil-nav i{
+    cursor: pointer;
+    font-size: 1.5rem;
+}
+
+.menu-br{
+    cursor: pointer;
+    display: none;
+}
+
+.menu-br .bar{
+    display: block;
+    width: 28px;
+    height: 3px;
+    border-radius: 3px;
+    background: gold;
+    margin: 5px auto;
+    transition: all 0.3s;
+}
+
+.menu-br .bar:nth-child(1),
+.menu-br .bar:nth-child(3){
+    background: gold;
+}
+
+/* container */
+
+h2{
+	color:gold;
+    margin:1.5 0px;	
+}
+
+p, ol{
+	color: white;
+}
+
+.container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.cards-brasil{
+    width: 50%;
+    padding-top: 5%;
+}
+
+.card{
+	padding: 20px;
+	background-color: green;
+    margin-top: 50px;
+	box-shadow: 7px 7px 15px black; 
+	margin-bottom: 50px;
+}
+
+.card img{
+	width: 100%;
+    box-shadow: 1px 1px 10px black; 
+}
+
+/*responsive */
+
+@media(max-width:800px){
+	.cards-brasil{
+    width: 100%;
+    padding: 0px;
+	}
+}
+
+@media (max-width:960px) {
+    
+    .brasil-nav ul li a{
+        color: green; 
+    }
+
+    .brasil-nav ul li {
+        margin-left: 5vw; 
+        height: 13.5vh;
+    }
+
+    .brasil-nav ul {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+        justify-content: center;
+    }
+
+    .menu-br{
+        display: block;
+    }
+
+    .menu-br.ativo .bar:nth-child(1){
+        transform:  translateY(8px) rotate(45deg);
+    }
+
+    .menu-br.ativo .bar:nth-child(2) {
+        opacity: 0;
+    }
+
+    .menu-br.ativo .bar:nth-child(3){
+        transform: translateY(-8px) rotate(-45deg);
+    }
+
+    .cabeçalho-br{
+        position: fixed;
+        right: -100%;
+        top: 85px;
+        width: 100%;
+        height: 100%;
+        flex-direction: column;
+        background: gold;
+        transition: 0.3s;
+    }
+
+    .cabeçalho-br.ativo{
+        right: 0;
+    }
+	.cards-brasil {
+        width: 100%;
+        padding-left: 0;
+		padding-top: 50px;
+        text-align: center; /
+    }
+
+    .card {
+        padding: 50px; 
+        margin: 50px auto; 
+        background-color: green;
+        box-shadow: 7px 7px 15px black;
+        width: 80%; 
+        max-width: 400px; 
+    }
+}
+

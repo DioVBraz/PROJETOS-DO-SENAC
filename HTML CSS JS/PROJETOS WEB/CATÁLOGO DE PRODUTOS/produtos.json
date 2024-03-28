@@ -1,0 +1,51 @@
+[
+    {
+        "id": 1,
+        "nome":" Flamengo 2023/2024",
+        "preco": 349,
+        "imagem": "Imagens/camisaFlamengo.png"
+    },
+    {
+        "id": 2,
+        "nome":" Palmeiras 2023/2024",
+        "preco": 369,
+        "imagem": "Imagens/camisaPalmeiras.png"
+    },
+    {
+        "id": 3,
+        "nome":" Corinthians 2023/2024",
+        "preco": 180,
+        "imagem": "Imagens/camisaCorinthians.png"
+    },
+    {
+        "id": 4,
+        "nome":" Fluminense 2023/2024",
+        "preco": 359,
+        "imagem": "Imagens/camisaFluminense.png"
+    },
+    {
+        "id": 5,
+        "nome":" São Paulo 2023/2024",
+        "preco": 349,
+        "imagem": "Imagens/camisaSP.png"
+    },
+    {
+        "id": 6,
+        "nome":" Internacional 2023/2024",
+        "preco": 349,
+        "imagem": "Imagens/camisaInter.png"
+    },
+    {
+        "id": 7,
+        "nome":" Cruzeiro 2023/2024",
+        "preco": 332,
+        "imagem": "Imagens/camisaCruzeiro.png"
+    },
+    {
+        "id": 8,
+        "nome":" Botafogo 2023/2024",
+        "preco": 256,
+        "imagem": "Imagens/camisaBotafogo.png"
+    }
+
+]
