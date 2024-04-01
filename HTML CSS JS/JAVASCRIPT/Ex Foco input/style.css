@@ -1,0 +1,19 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    border: border-box;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #ccc;
+    height: 100vh;
+}
+
+#inp {
+    width: 200px;
+    height: 50px;
+    border-radius: 10px;
+}

@@ -1,0 +1,374 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+body{
+    margin: 0;
+    background-color: #000;
+    color: #eee;
+    font-family: Poppins;
+    font-size: 12px;
+}
+
+a{
+    text-decoration: none;
+}
+
+header{
+    width: 1140px;
+    max-width: 80%;
+    margin: auto;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    position: relative;
+    z-index: 100;
+}
+
+header a{
+    color: #eee;
+    margin-right: 40px;
+}
+
+header a:hover{
+    color: #f1683a;
+    transition:  0.3s all;
+}
+
+/* container */
+
+.container{
+    height: 100vh;
+    margin-top: -50px;
+    width: 100vw;
+    overflow: hidden;
+    position: relative;
+}
+
+.container .jogos-lista .item{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    inset: 0 0 0 0;
+}
+
+.container .jogos-lista .item img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.container .jogos-lista .item .content{
+    position: absolute;
+    top: 15%;
+    width: 1140px;
+    max-width: 80%;
+    left: 50%;
+    transform: translateX(-50%);
+    padding-right: 30%;
+    box-sizing: border-box;
+    color: #fff;
+    text-shadow: 0 5px 10px #0004;
+}
+
+.container .jogos-lista .item .nota{
+    font-weight: bold;
+    letter-spacing: 2px;
+    color: white;
+    text-shadow: 1px 1px black;
+}
+
+.container .jogos-lista .item .nota:hover{
+    color: #f1683a;
+    transition:  0.3s all;
+}
+
+.container .jogos-lista .item .titulo,
+.container .jogos-lista .item .desenvolvedor{
+    font-size: 5em;
+    font-weight: bold;
+    line-height: 1em;
+}
+
+.container .jogos-lista .item .titulo{
+    color: #f1683a;
+}
+
+.container .jogos-lista .item .descricao{
+    color: white;
+    font-weight: 700;
+    text-shadow: 1px 1px black;
+}
+
+.container .jogos-lista .item .descricao:hover{
+    color: #f1683a;
+    transition:  0.3s all; 
+}
+
+.container .jogos-lista .item .botoes{
+    display: grid;
+    grid-template-columns: repeat(2, 130px);
+    grid-template-rows: 40px;
+    gap: 5px;
+    margin-top: 20px;
+}
+
+.container .jogos-lista .item .botoes button{
+    border: none;
+    background-color: #eee;
+    letter-spacing: 3px;
+    font-family: Poppins;
+    font-weight: 500;
+}
+
+.container .jogos-lista .item .botoes button:nth-child(2){
+    background-color: transparent;
+    border: 1px solid #fff;
+    color: #eee;
+}
+
+/* cards */
+
+.cards{
+    position: absolute;
+    bottom: 50px;
+    left: 50%;
+    width: max-content;
+    z-index: 100;
+    display: flex;
+    gap: 20px;
+}
+
+.cards .item{
+    width: 150px;
+    height: 220px;
+    flex-shrink: 0;
+    position: relative;
+}
+
+.cards .item img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 20px;
+}
+
+.cards .item .content{
+    color: #fff;
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    right: 10px;
+}
+
+.cards .item .content .titulo{
+    font-weight: 500;
+}
+
+.cards .item .content .nota-cards{
+    font-weight: 300;
+}
+
+/* botoes-cards */
+
+.botoes-cards{
+    position: absolute;
+    top: 80%;
+    right: 52%;
+    z-index: 100;
+    width: 300px;
+    max-width: 30%;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.botoes-cards button{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #eee4;
+    border: none;
+    color: #fff;
+    font-family: monospace;
+    font-weight: bold;
+    transition: .5s;
+}
+
+.botoes-cards button:hover{
+    background-color: #f1683a;
+    color: #000;
+}
+
+/* animações */
+
+.container .jogos-lista .item:nth-child(1){
+    z-index: 1;
+}
+
+/* animações dos textos*/
+
+.container .jogos-lista .item:nth-child(1) .content .nota,
+.container .jogos-lista .item:nth-child(1) .content .titulo,
+.container .jogos-lista .item:nth-child(1) .content .desenvolvedor,
+.container .jogos-lista .item:nth-child(1) .content .descricao,
+.container .jogos-lista .item:nth-child(1) .content .botoes{
+    transform: translateY(50px);
+    filter: blur(20px);
+    opacity: 0;
+    animation: showContent .5s 1s linear 1 forwards;
+}
+
+@keyframes showContent{
+    to{
+        transform: translateY(0px);
+        filter: blur(0px);
+        opacity: 1;
+    }
+}
+
+.container .jogos-lista .item:nth-child(1) .content .titulo{
+    animation-delay: 1.2s!important;
+}
+
+.container .jogos-lista .item:nth-child(1) .content .desenvolvedor{
+    animation-delay: 1.4s!important;
+}
+
+.container .jogos-lista .item:nth-child(1) .content .descricao{
+    animation-delay: 1.6s!important;
+}
+
+.container .jogos-lista .item:nth-child(1) .content .botoes{
+    animation-delay: 1.8s!important;
+}
+
+/* criar animação no próximo clique */
+.container.next .jogos-lista .item:nth-child(1) img{
+    width: 150px;
+    height: 220px;
+    position: absolute;
+    bottom: 50px;
+    left: 50%;
+    border-radius: 30px;
+    animation: showImage .5s linear 1 forwards;
+}
+
+@keyframes showImage{
+    to{
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        border-radius: 0;
+    }
+}
+
+.container.next .cards .item:nth-last-child(1){
+    overflow: hidden;
+    animation: showcards .5s linear 1 forwards;
+}
+
+.container.voltar .jogos-lista .item img{
+    z-index: 100;
+}
+
+@keyframes showcards{
+    from{
+        width: 0;
+        opacity: 0;
+    }
+}
+
+.container.next .cards{
+    animation: effectNext .5s linear 1 forwards;
+}
+
+@keyframes effectNext{
+    from{
+        transform: translateX(150px);
+    }
+}
+
+/* running tempo-transicao */
+
+.container .tempo-transicao{
+    position: absolute;
+    z-index: 1000;
+    width: 0%;
+    height: 3px;
+    background-color: #f1683a;
+    left: 0;
+    top: 0;
+}
+
+.container.next .tempo-transicao,
+.container.voltar .tempo-transicao{
+    animation: runningtime 3s linear 1 forwards;
+}
+
+@keyframes runningtempo-transicao{
+    from{ width: 100%}
+    to{width: 0}
+}
+
+/* voltar click */
+
+.container.voltar .jogos-lista .item:nth-child(2){
+    z-index: 2;
+}
+
+.container.voltar .jogos-lista .item:nth-child(2) img{
+    animation: outFrame 0.5s linear 1 forwards;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+
+@keyframes outFrame{
+    to{
+        width: 150px;
+        height: 220px;
+        bottom: 50px;
+        left: 50%;
+        border-radius: 20px;
+    }
+}
+
+.container.voltar .cards .item:nth-child(1){
+    overflow: hidden;
+    opacity: 0;
+    animation: showcards .5s linear 1 forwards;
+}
+
+.container.next .botoes-cards button,
+.container.voltar .botoes-cards button{
+    pointer-events: none;
+}
+
+.container.voltar .jogos-lista .item:nth-child(2) .content .nota,
+.container.voltar .jogos-lista .item:nth-child(2) .content .titulo,
+.container.voltar .jogos-lista .item:nth-child(2) .content .desenvolvedor,
+.container.voltar .jogos-lista .item:nth-child(2) .content .descricao,
+.container.voltar .jogos-lista .item:nth-child(2) .content .botoes{
+    animation: contentOut 1.5s linear 1 forwards!important;
+}
+
+@keyframes contentOut{
+    to{
+        transform: translateY(-150px);
+        filter: blur(20px);
+        opacity: 0;
+    }
+}
+
+@media screen and (max-width: 678px) {
+    .container .jogos-lista .item .content{
+        padding-right: 0;
+    }
+    .container .jogos-lista .item .content .titulo{
+        font-size: 30px;
+    }
+
+    .cards{
+        display: none;
+    }
+}

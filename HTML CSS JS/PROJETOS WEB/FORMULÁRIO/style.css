@@ -1,0 +1,290 @@
+:root {
+    --lighter-color: #e0e0e7;
+}
+
+*,
+::before,
+::after {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: url(imagens/imgForm.png) no-repeat;
+    background-position: center;
+    background-size: cover;
+    min-height: 100vh;
+    width: 100%;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.8;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+ul {
+    list-style: none;
+}
+
+h1,
+h2,
+h3 {
+    font-weight: 700;
+    line-height: 1.25;
+    margin: 0 0 0.5em;
+}
+
+img {
+    max-width: 100%;
+    vertical-align: middle;
+}
+
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 2em;
+}
+
+.form-container {
+    display: flex;
+    flex-direction: column;
+    margin-top: 5em;
+    border: 8px solid white;
+    border-radius: 15px;
+    background-color: #faf9ff;
+}
+
+.form-container .cabeçalho-form {
+    position: relative;
+    padding: 1em;
+}
+
+.logo {
+    font-size: 1.75em;
+    font-weight: 800;
+    color: #52505e;
+    padding: 40px 48px;
+    text-align: center;
+}
+
+.logo span {
+    color: orange;
+}
+
+.cabeçalho-form ul.cabeçalho-etapas {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 2em;
+}
+
+.cabeçalho-form ul.cabeçalho-etapas li {
+    position: relative;
+    display: flex;
+    align-items: flex-start;
+}
+
+.cabeçalho-form ul.cabeçalho-etapas li > span {
+    position: relative;
+    width: 40px;
+    height: 40px;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 1em;
+    border-radius: 50%;
+    background-color: #e0e0e7;
+    z-index: 1;
+}
+
+.cabeçalho-form ul.cabeçalho-etapas li.ativo > span {
+    color: white;
+    background-color: orange;
+    border: 4px solid rgb(255, 145, 0);
+    z-index: 1;
+}
+
+.cabeçalho-form ul.cabeçalho-etapas li p span {
+    font-size: 14px;
+    color: #b0b0c0;
+    display: none;
+}
+
+
+.cabeçalho-form ul li p {
+    position: absolute;
+    top: -3em;
+    font-size: 12px;
+    color: orange;
+}
+
+.form-container form {
+    width: 100%;
+    padding: 3em 1em;
+    background-color: white;
+    border-radius: 30px 30px 15px 15px;
+}
+
+form > div {
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+form > div p {
+    color: #b0b0c0;
+}
+
+form > div h2 i{
+    color: orange;
+    font-size: 2em;
+}
+
+form > div h2 p{
+    color: orange;
+}
+
+form > div > div:not(.checkbox) {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 2em;
+}
+
+form :where(input, select) {
+    height: 40px;
+    padding: 0 1em;
+    border-radius: 7px;
+    outline-color: rgb(255, 145, 0);
+    border: 1px solid #e0e0e7;
+    background-color: transparent;
+}
+
+form label {
+    font-size: 14px;
+    margin-bottom: 0.5em;
+    font-weight: 600;
+}
+
+form .grupo {
+    display: flex;
+}
+
+form .grupo input {
+    max-width: 70px;
+    text-align: center;
+    margin-right: 1em;
+}
+
+form .checkbox input {
+    height: auto;
+}
+
+form > div:not(.botoes) {
+    display: none;
+    animation: fadeIn .6s cubic-bezier(0.39, 0.575, 0.565, 1) both;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(10%);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+form > div.ativo {
+    display: block;
+}
+
+.botoes {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1em;
+    margin-top: 2em;
+}
+
+.botoes [class*="btn-"] {
+    background-color: orange;
+    color: white;
+    padding: 1em 2.5em;
+    border: 4px solid rgb(255, 145, 0);
+    border-radius: 30px;
+    cursor: pointer;
+    transition: background-color .3s, border-color .3s ease-out;
+}
+
+.botoes [class*="btn-"]:disabled {
+    background-color: rgba(255, 166, 0, 0.767);
+    border-color: rgb(255, 145, 0);
+}
+
+.botoes [class*="btn-"]:hover:not(:disabled) {
+    background-color: rgba(255, 166, 0, 0.767);
+    border-color: rgb(255, 145, 0);
+}
+
+.botoes .btn-enviar,
+.form-tres.ativo ~ .botoes .btn-proximo {
+    display: none;
+}
+
+.form-tres.ativo ~ .botoes .btn-enviar {
+    display: block;
+}
+
+.form-tres.ativo ~ .botoes {
+    justify-content: space-between;
+}
+
+@media screen and (min-width: 768px) {
+
+    .container{
+        margin-bottom: 4.5rem;
+    }
+
+    .form-container {
+        flex-direction: row;
+    }
+
+    .form-container .cabeçalho-form {
+        flex: 1 0 35%;
+        min-width: 300px;
+        padding: 3em;
+    }
+
+    .logo {
+        margin: -48px -48px 48px;
+    }
+
+    .cabeçalho-form ul.cabeçalho-etapas {
+        flex-direction: column;
+        gap: 0;
+    }
+
+    .form-container .form-container {
+        padding: 3em;
+        border-radius: 0 15px 15px 0;
+    }
+
+    .cabeçalho-form ul li p {
+        position: relative;
+        top: auto;
+        font-size: inherit;
+        top: -1em;
+    }
+
+    .cabeçalho-form ul.cabeçalho-etapas li p span {
+        display: block;
+    }
+}

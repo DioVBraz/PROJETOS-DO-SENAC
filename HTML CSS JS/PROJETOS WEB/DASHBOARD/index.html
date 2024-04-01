@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <title>Dashboard</title>
+</head>
+<body>
+
+    <div class="container">
+        <div class="logo"></div>
+        <ul class="menu">
+            <li class="menu-itens">
+                <a href="#">
+                    <i class="fas fa-tachometer-alt"></i>
+                    <span>Dashboard</span>
+                </a>
+            </li>
+
+            <li>
+                <a href="#">
+                    <i class="fas fa-user"></i>
+                    <span>Perfil</span>
+                </a>
+            </li>
+
+            <li>
+                <a href="#">
+                    <i class="fas fa-chart-bar"></i>
+                    <span>Estatísticas</span>
+                </a>
+            </li>
+    
+            <li>
+                <a href="#">
+                    <i class="fas fa-briefcase"></i>
+                    <span>Carreira</span>
+                </a>
+            </li>
+
+            <li>
+                <a href="#">
+                    <i class="fas fa-question-circle"></i>
+                    <span>Perguntas frequentes</span>
+                </a>
+            </li>
+
+            <li>
+                <a href="#">
+                    <i class="fas fa-star"></i>
+                    <span>Avaliações</span>
+                </a>
+            </li>
+
+            <li>
+                <a href="#">
+                    <i class="fas fa-cog"></i>
+                    <span>Config</span>
+                </a>
+            </li>
+
+            <li class="sair">
+                <a href="#">
+                    <i class="fas fa-sign-out-alt"></i>
+                    <span>Sair</span>
+                </a>
+            </li>
+        </ul>
+    </div>
+
+    <div class="dashboard-container">
+        <div class="cabeçalho-pesquisa">
+            <div class="titulo-pesquisa">
+                <h2>Dashboard</h2>
+            </div>
+            <div class="pesquisa">
+                <div class="pesquisa-icon">
+                    <i class="fa-solid fa-search"></i>
+                    <input type="text" placeholder="Pesquisar por" />
+                </div>
+            </div>
+        </div>
+       
+       <div class="cards-container">
+           <h3 class="cards-titulo">Seus dados</h3>
+          <div class="cards">
+              <div class="cards-pagamento">
+                <div class="cards-cabeçalho">
+                    <div class="info-cards">
+                        <span class="titulo-info">Valor do pagamento</span>
+                        <span class="valor-cards">R$500.00</span>
+                    </div>
+                    <i class="fa-solid fa-brazilian-real-sign"></i>
+                </div>
+                <span class="numero-cards">**** **** **** 5542</span>
+               </div>
+
+               <div class="cards-pagamento">
+                <div class="cards-cabeçalho">
+                    <div class="info-cards">
+                        <span class="titulo-info">Ordem de pagamento</span>
+                        <span class="valor-cards">R$350.00</span>
+                    </div>
+                    <i class="fas fa-list"></i>
+                </div>
+                <span class="numero-cards">**** **** **** 8693</span>
+               </div>
+
+               <div class="cards-pagamento">
+                <div class="cards-cabeçalho">
+                    <div class="info-cards">
+                        <span class="titulo-info">Pagamento do cliente</span>
+                        <span class="valor-cards">R$200.00</span>
+                    </div>
+                    <i class="fas fa-users icon"></i>
+                </div>
+                <span class="numero-cards">**** **** **** 3484</span>
+               </div>
+
+               <div class="cards-pagamento">
+                <div class="cards-cabeçalho">
+                    <div class="info-cards">
+                        <span class="titulo-info">Processo de pagamento</span>
+                        <span class="valor-cards">R$150.00</span>
+                    </div>
+                    <i class="fa-solid fa-check icon"></i>
+                </div>
+                <span class="numero-cards">**** **** **** 7745</span>
+               </div>
+            </div>
+        </div>
+
+        <div class="finanças-container">
+            <h3 class="finanças-titulo">Dados financeiros</h3>
+            <div class="finanças">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Data</th>
+                            <th>Tipo de transação</th>
+                            <th>Descrição</th>
+                            <th>Valor</th>
+                            <th>Categoria</th>
+                            <th>Status</th>
+                            <th>Ação</th>
+                        </tr>
+                        <tbody>
+                            <tr>
+                                <td>01-05-2023</td>
+                                <td>Despesas</td>
+                                <td>Material de escritório</td>
+                                <td>R$250</td>
+                                <td>Despesas de escritório</td>
+                                <td>Pendente</td>
+                                <td><button>Editar</button></td>
+                            </tr>
+
+                            <tr>
+                                <td>02-05-2023</td>
+                                <td>Renda</td>
+                                <td>Pagamento do cliente</td>
+                                <td>R$500</td>
+                                <td>Vendas</td>
+                                <td>Completo</td>
+                                <td><button>Editar</button></td>
+                            </tr>
+
+                            <tr>
+                                <td>03-05-2023</td>
+                                <td>Despesas</td>
+                                <td>Despesas de viagem</td>
+                                <td>R$250</td>
+                                <td>Viagem</td>
+                                <td>Pendente</td>
+                                <td><button>Editar</button></td>
+                            </tr>
+                        </tbody>
+                        <tfoot>
+                            <tr>
+                                <td colspan="7">Total: R$1,000</td>
+                            </tr>
+                        </tfoot>
+                    </thead>
+                </table>
+            </div>
+        </div>
+
+    </div>
+</body>
+</html>

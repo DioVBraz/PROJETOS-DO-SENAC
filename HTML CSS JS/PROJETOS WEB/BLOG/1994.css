@@ -1,0 +1,182 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    list-style: none;
+    text-decoration: none;
+}
+
+body {
+    background: gold;
+}
+
+.brasil-nav {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 5px 40px;
+    width: 100%;
+    transition: all 0.5s;
+    position: fixed;
+    background-color: green;
+    box-shadow: 1px 1px 10px green;
+}
+
+.logo img {
+    width: 55%;
+    margin-top: 1vh;
+    border: solid 1px gold;
+}
+
+.brasil-nav ul {
+    display: flex;
+    gap: 5rem;
+}
+
+.brasil-nav ul li a {
+    color: gold;
+    font-weight: 500;
+    transition: all 0.5s;
+}
+
+.brasil-nav ul li a:hover {
+    color: white;
+}
+
+.brasil-nav i {
+    cursor: pointer;
+    font-size: 1.5rem;
+}
+
+.menu-br {
+    cursor: pointer;
+    display: none;
+}
+
+.menu-br .bar {
+    display: block;
+    width: 28px;
+    height: 3px;
+    border-radius: 3px;
+    background: gold;
+    margin: 5px auto;
+    transition: all 0.3s;
+}
+
+.menu-br .bar:nth-child(1),
+.menu-br .bar:nth-child(3) {
+    background: gold;
+}
+
+/* container */
+
+.cards-container {
+  display: flex;
+  flex-direction: column;
+  padding-top: 120px;
+  color: #111;
+  gap: 2rem;
+  margin-bottom: 30px;
+}
+
+.container {
+  max-width: 800px;
+  margin: 0 auto; 
+  padding: 2rem;
+  background-color: green;
+  line-height: 1.4rem;
+  box-shadow: 4px 4px 12px black;
+}
+
+.container h2 {
+  color: gold;
+}
+
+.container .text {
+  color: white;
+}
+
+.container .ler-mais-text {
+  color: white;
+}
+
+.ler-mais-btn {
+  color: blue;
+  cursor: pointer;
+}
+
+.ler-mais-text {
+  display: none;
+}
+
+.ler-mais-text--show {
+  display: inline;
+}
+
+
+
+@media (max-width: 960px) {
+
+    .brasil-nav ul li a{
+        color: green; 
+    }
+
+    .brasil-nav ul li {
+        margin-left: 5vw; 
+        height: 13vh;
+    }
+
+    .brasil-nav ul {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 0.2rem;
+        justify-content: center;
+    }
+
+    .menu-br{
+        display: block;
+    }
+
+    .menu-br.ativo .bar:nth-child(1){
+        transform:  translateY(8px) rotate(45deg);
+    }
+
+    .menu-br.ativo .bar:nth-child(2) {
+        opacity: 0;
+    }
+
+    .menu-br.ativo .bar:nth-child(3){
+        transform: translateY(-8px) rotate(-45deg);
+    }
+
+    .cabeçalho-br{
+        position: fixed;
+        right: -100%;
+        top: 85px;
+        width: 100%;
+        height: 100%;
+        flex-direction: column;
+        background: gold;
+        transition: 0.3s;
+    }
+
+    .cabeçalho-br.ativo{
+        right: 0;
+    }
+
+    .cards-container {
+      padding-top: 120px;
+      margin: 0 20px;
+      margin-bottom: 40px;
+  }
+
+  .container {
+      max-width: 100%; 
+      padding: 1rem; 
+  }
+
+}

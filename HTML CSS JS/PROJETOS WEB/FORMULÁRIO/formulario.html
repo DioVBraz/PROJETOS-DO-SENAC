@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.0/css/all.min.css" integrity="sha512-10/jx2EXwxxWqCLX/hHth/vu2KY3jCF70dCQB8TSgNjbCVAC/8vai53GfMDrO2Emgwccf2pJqxct9ehpzG+MTw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style.css">
+    <title>Formulário</title>
+</head>
+<body>
+
+    <div id="pagina" class="site">
+        <div class="container">
+            <div class="form-container">
+                <div class="cabeçalho-form">
+                    <div class="logo"><a href="/"><span>Form</span>ulário</a></div>
+                    <ul class="cabeçalho-etapas">
+                        <li class="etapas ativo">
+                            <span>1</span>
+                            <p>Pessoal<br><span>25 segundos para concluir</span></p>
+                        </li>
+
+                        <li class="etapas">
+                            <span>2</span>
+                            <p>Contatos<br><span>60 segundos para concluir</span></p>
+                        </li>
+
+                        <li class="etapas">
+                            <span>3</span>
+                            <p>Segurança<br><span>30 segundos para concluir</span></p>
+                        </li>
+                    </ul>
+                </div>
+                <form action="">
+                    <div class="form-um formularios ativo">
+                        <div class="bg-icon"></div>
+                        <h2> <i class="fa-solid fa-user-tie"></i> <p>Informações Pessoais </p></h2>
+                        <p>Insira suas informações pessoais corretamente</p>
+                        <div>
+                            <label>Primeiro Nome</label>
+                            <input type="text" placeholder="Nome">
+                        </div>
+                        <div>
+                            <label>Sobrenome</label>
+                            <input type="text" placeholder="Sobrenome">
+                        </div>
+                        <div class="aniversario">
+                            <label>Data de nascimento</label>
+                            <div class="grupo">
+                                <input type="text" patter="[0-9]*" name="dia" velue="" min="0" max="31" placeholder="Dia">
+                                <input type="text" patter="[0-9]*" name="mês" velue="" min="0" max="12" placeholder="Mês">
+                                <input type="text" patter="[0-9]*" name="ano" velue="" min="0" max="2050" placeholder="Ano">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-dois formularios">
+                        <div class="bg-icon"></div>
+                        <h2><i class="fa-solid fa-phone"></i> <p>Contatos </p></h2>
+                        <div>
+                            <label>Número de telefone</label>
+                            <input type="tel" placeholder="Digite o seu número de telefone">
+                        </div>
+
+                        <div>
+                            <label>Endereço</label>
+                            <input type="text" placeholder="Digite o seu endereço">
+                        </div>
+
+                        <div>
+                            <input type="text" placeholder="Complemento">
+                        </div>
+
+                        <div>
+                            <label>Cidade</label>
+                            <input type="text" placeholder="Digite o nome da sua cidade">
+                        </div>
+
+                        <div>
+                            <label>Estado</label>
+                            <input type="text" placeholder="Digite o nome do seu Estado">
+                        </div>
+
+                        <div>
+                            <label>CEP</label>
+                            <input type="text" placeholder="Digite o seu CEP">
+                        </div>
+
+                        <div>
+                            <label>País</label>
+                            <select name="país" id="país">
+                                <option value="">Selecione o seu país</option>
+                                <option value="Afeganistão">Afeganistão</option>
+  <option value="Albânia">Albânia</option>
+  <option value="Argélia">Argélia</option>
+  <option value="Argentina">Argentina</option>
+  <option value="Austrália">Austrália</option>
+  <option value="Áustria">Áustria</option>
+  <option value="Bangladesh">Bangladesh</option>
+  <option value="Brasil">Brasil</option>
+  <option value="Canadá">Canadá</option>
+  <option value="China">China</option>
+  <option value="Colômbia">Colômbia</option>
+  <option value="Egito">Egito</option>
+  <option value="França">França</option>
+  <option value="Alemanha">Alemanha</option>
+  <option value="Índia">Índia</option>
+  <option value="Indonésia">Indonésia</option>
+  <option value="Irã">Irã</option>
+  <option value="Iraque">Iraque</option>
+  <option value="Itália">Itália</option>
+  <option value="Japão">Japão</option>
+  <option value="México">México</option>
+  <option value="Países Baixos">Países Baixos</option>
+  <option value="Nova Zelândia">Nova Zelândia</option>
+  <option value="Nigéria">Nigéria</option>
+  <option value="Paquistão">Paquistão</option>
+  <option value="Peru">Peru</option>
+  <option value="Filipinas">Filipinas</option>
+  <option value="Polônia">Polônia</option>
+  <option value="Portugal">Portugal</option>
+  <option value="Rússia">Rússia</option>
+  <option value="Arábia Saudita">Arábia Saudita</option>
+  <option value="África do Sul">África do Sul</option>
+  <option value="Coreia do Sul">Coreia do Sul</option>
+  <option value="Espanha">Espanha</option>
+  <option value="Suécia">Suécia</option>
+  <option value="Suíça">Suíça</option>
+  <option value="Turquia">Turquia</option>
+  <option value="Emirados Árabes Unidos">Emirados Árabes Unidos</option>
+  <option value="Reino Unido">Reino Unido</option>
+  <option value="Estados Unidos">Estados Unidos</option>
+                            </select>
+                        </div>
+                    </div>
+                        <div class="form-tres formularios">
+                            <div class="bg-icon"></div>
+                            <h2><i class="fa-solid fa-lock"></i> <p>Segurança </p></h2>
+                            <div>
+                                <label>Email</label>
+                                <input type="email" placeholder="Digite o seu email">
+                            </div>
+
+                            <div>
+                                <label>Nome de usuário</label>
+                                <input type="text" placeholder="Digite o seu nome de usuário">
+                            </div>
+
+                            <div>
+                                <label>Senha</label>
+                                <input type="password" placeholder="Digite a sua senha">
+                            </div>
+
+                            <div>
+                                <input type="password" placeholder="Confirme a sua senha">
+                            </div>
+
+                            <div class="checkbox">
+                                <input type="checkbox">
+                                <label>Eu li e concordo com os termos de uso</label>
+                            </div>
+                        </div>
+                    <div class="botoes">
+                        <button type="button" class="btn-voltar" disabled>Voltar</button>
+                        <button type="button" class="btn-proximo">Próxima Etapa</button>
+                        <button type="button" class="btn-enviar">Enviar</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script src="form.js"></script>
+    
+</body>
+</html>
