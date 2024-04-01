@@ -1,26 +1,32 @@
 import customtkinter as ctk
 from tkinter import messagebox
 import sqlite3
+
 # Definição da classe para representar uma conta bancária
 class Conta():
     def __init__(self, titular, saldo=0):
         self.titular = titular  
         self.saldo = saldo  
+
     # Método para depositar um valor na conta
     def depositar(self, valor):
         self.saldo += valor
+
     # Método para sacar um valor da conta
     def sacar(self, valor):
         if self.saldo >= valor:
             self.saldo -= valor
         else:
             raise SaldoInsuficiente()
+        
     # Método para consultar o saldo da conta
     def consultar_saldo(self):
         return self.saldo
+    
 # Definição de uma exceção personalizada para saldo insuficiente
 class SaldoInsuficiente(Exception):
     pass
+
 # Definição da classe para representar o Banco
 class Banco():
     def __init__(self):
@@ -28,6 +34,7 @@ class Banco():
         self.cursor = self.banco.cursor()
         self.cursor.execute('''CREATE TABLE IF NOT EXISTS banco (id INTEGER PRIMARY KEY AUTOINCREMENT, nome VARCHAR(80), saldo INTEGER)''')
         self.banco.commit()
+
     def CriarConta(self, conta):
         try:
             self.cursor.execute("INSERT INTO banco (nome, saldo) VALUES (?, ?)", (conta.titular, conta.saldo,))
@@ -35,6 +42,7 @@ class Banco():
             messagebox.showinfo("Conta Criada", "Conta bancária criada com sucesso.")
         except sqlite3.Error as err:
             messagebox.showerror("Erro", "Erro ao criar conta: " + str(err))
+
     def Depositar(self, nome, valor):
         try:
             self.cursor.execute("UPDATE banco SET saldo = saldo + ? where nome = ?", (valor, nome))
@@ -42,6 +50,7 @@ class Banco():
             messagebox.showinfo("Depósito", f"Depósito de R${valor} realizado.")
         except sqlite3.Error as err:
             messagebox.showerror("Erro", "Erro ao depositar: " + str(err))
+
     def Sacar(self, nome, valor):
         try:
             self.cursor.execute("SELECT saldo FROM banco WHERE nome = ?", (nome,))
@@ -54,6 +63,7 @@ class Banco():
                 messagebox.showerror("Saldo Insuficiente", "Saldo insuficiente.")
         except sqlite3.Error as err:
             messagebox.showerror("Erro", "Erro ao sacar: " + str(err))
+
     def VerSaldo(self, nome):
         try:
             self.cursor.execute("SELECT saldo FROM banco WHERE nome = ?", (nome,))
@@ -61,6 +71,7 @@ class Banco():
             messagebox.showinfo("Saldo Atual", f"O saldo atual da conta é: R${saldo_atual}")
         except sqlite3.Error as err:
             messagebox.showerror("Erro", "Erro ao verificar saldo: " + str(err))
+
 # Classe principal da aplicação que herda de customtkinter
 class SistemaBancarioApp(ctk.CTk):
     def __init__(self):
@@ -70,6 +81,7 @@ class SistemaBancarioApp(ctk.CTk):
         # Criação do frame principal da aplicação
         self.frame_conta = ContaFrame(self)
         self.frame_conta.pack(expand=True, fill=ctk.BOTH)
+
 # Classe para o frame que contém os elementos da interface relacionados à conta
 class ContaFrame(ctk.CTkFrame):
     def __init__(self, app):
@@ -96,8 +108,8 @@ class ContaFrame(ctk.CTkFrame):
         self.botao_ver_saldo = ctk.CTkButton(self, text="Ver Saldo", command=self.ver_saldo)
         self.botao_ver_saldo.grid(row=5, column=0, columnspan=2, padx=20, pady=5, sticky="ew")
         self.grid_columnconfigure(1, weight=1)
+
     # Método para criar uma conta bancária com base nos dados inseridos
- 
     def criar_conta(self):
         titular = self.entrada_titular.get()
         valor_deposito = self.entrada_deposito.get()
@@ -140,6 +152,7 @@ class ContaFrame(ctk.CTkFrame):
                 messagebox.showerror("Erro", "Por favor, insira um valor válido.")
         else:
             messagebox.showerror("Erro", "Por favor, insira o nome do titular e o valor a ser depositado.")
+
     # Método para realizar um saque na conta bancária
     def sacar(self):
         nome = self.entrada_titular.get()
@@ -154,6 +167,7 @@ class ContaFrame(ctk.CTkFrame):
                 messagebox.showerror("Saldo Insuficiente", "Saldo insuficiente.")
         else:
             messagebox.showerror("Erro", "Por favor, insira o nome do titular e o valor a ser sacado.")
+
     # Método para verificar o saldo da conta bancária
     def ver_saldo(self):
         nome = self.entrada_titular.get()
@@ -161,6 +175,7 @@ class ContaFrame(ctk.CTkFrame):
             self.app.banco.VerSaldo(nome)
         else:
             messagebox.showerror("Erro", "Por favor, insira o nome do titular.")
+            
 # Função principal que inicia a aplicação
 if __name__ == "__main__":
     app = SistemaBancarioApp()
